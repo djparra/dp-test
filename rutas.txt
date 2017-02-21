@@ -1,0 +1,49 @@
++--------+-----------+--------------------------------------------------------+-------------------------------+------------------------------------------------------------------------+--------------+
+| Domain | Method    | URI                                                    | Name                          | Action                                                                 | Middleware   |
++--------+-----------+--------------------------------------------------------+-------------------------------+------------------------------------------------------------------------+--------------+
+|        | GET|HEAD  | /                                                      |                               | Closure                                                                | web          |
+|        | POST      | api/beneficiarios                                      | beneficiarios.store           | App\Http\Controllers\Api\Beneficiarios\BeneficiariosController@store   | api          |
+|        | GET|HEAD  | api/beneficiarios                                      | beneficiarios.index           | App\Http\Controllers\Api\Beneficiarios\BeneficiariosController@index   | api          |
+|        | GET|HEAD  | api/beneficiarios/create                               | beneficiarios.create          | App\Http\Controllers\Api\Beneficiarios\BeneficiariosController@create  | api          |
+|        | PUT|PATCH | api/beneficiarios/{beneficiario}                       | beneficiarios.update          | App\Http\Controllers\Api\Beneficiarios\BeneficiariosController@update  | api          |
+|        | DELETE    | api/beneficiarios/{beneficiario}                       | beneficiarios.destroy         | App\Http\Controllers\Api\Beneficiarios\BeneficiariosController@destroy | api          |
+|        | GET|HEAD  | api/beneficiarios/{beneficiario}                       | beneficiarios.show            | App\Http\Controllers\Api\Beneficiarios\BeneficiariosController@show    | api          |
+|        | GET|HEAD  | api/beneficiarios/{beneficiario}/edit                  | beneficiarios.edit            | App\Http\Controllers\Api\Beneficiarios\BeneficiariosController@edit    | api          |
+|        | GET|HEAD  | api/centros                                            | centros.index                 | App\Http\Controllers\Api\Centros\CentrosController@index               | api          |
+|        | POST      | api/centros                                            | centros.store                 | App\Http\Controllers\Api\Centros\CentrosController@store               | api          |
+|        | GET|HEAD  | api/centros/create                                     | centros.create                | App\Http\Controllers\Api\Centros\CentrosController@create              | api          |
+|        | GET|HEAD  | api/centros/{centro}                                   | centros.show                  | App\Http\Controllers\Api\Centros\CentrosController@show                | api          |
+|        | PUT|PATCH | api/centros/{centro}                                   | centros.update                | App\Http\Controllers\Api\Centros\CentrosController@update              | api          |
+|        | DELETE    | api/centros/{centro}                                   | centros.destroy               | App\Http\Controllers\Api\Centros\CentrosController@destroy             | api          |
+|        | GET|HEAD  | api/centros/{centro}/beneficiarios                     | centros.beneficiarios.index   | App\Http\Controllers\Api\Centros\BeneficiariosController@index         | api          |
+|        | POST      | api/centros/{centro}/beneficiarios                     | centros.beneficiarios.store   | App\Http\Controllers\Api\Centros\BeneficiariosController@store         | api          |
+|        | GET|HEAD  | api/centros/{centro}/beneficiarios/create              | centros.beneficiarios.create  | App\Http\Controllers\Api\Centros\BeneficiariosController@create        | api          |
+|        | PUT|PATCH | api/centros/{centro}/beneficiarios/{beneficiario}      | centros.beneficiarios.update  | App\Http\Controllers\Api\Centros\BeneficiariosController@update        | api          |
+|        | GET|HEAD  | api/centros/{centro}/beneficiarios/{beneficiario}      | centros.beneficiarios.show    | App\Http\Controllers\Api\Centros\BeneficiariosController@show          | api          |
+|        | DELETE    | api/centros/{centro}/beneficiarios/{beneficiario}      | centros.beneficiarios.destroy | App\Http\Controllers\Api\Centros\BeneficiariosController@destroy       | api          |
+|        | GET|HEAD  | api/centros/{centro}/beneficiarios/{beneficiario}/edit | centros.beneficiarios.edit    | App\Http\Controllers\Api\Centros\BeneficiariosController@edit          | api          |
+|        | GET|HEAD  | api/centros/{centro}/edit                              | centros.edit                  | App\Http\Controllers\Api\Centros\CentrosController@edit                | api          |
+|        | GET|HEAD  | api/instituciones                                      | instituciones.index           | App\Http\Controllers\Api\Instituciones\InstitucionesController@index   | api          |
+|        | POST      | api/instituciones                                      | instituciones.store           | App\Http\Controllers\Api\Instituciones\InstitucionesController@store   | api          |
+|        | GET|HEAD  | api/instituciones/create                               | instituciones.create          | App\Http\Controllers\Api\Instituciones\InstitucionesController@create  | api          |
+|        | DELETE    | api/instituciones/{institucione}                       | instituciones.destroy         | App\Http\Controllers\Api\Instituciones\InstitucionesController@destroy | api          |
+|        | PUT|PATCH | api/instituciones/{institucione}                       | instituciones.update          | App\Http\Controllers\Api\Instituciones\InstitucionesController@update  | api          |
+|        | GET|HEAD  | api/instituciones/{institucione}                       | instituciones.show            | App\Http\Controllers\Api\Instituciones\InstitucionesController@show    | api          |
+|        | POST      | api/instituciones/{institucione}/centros               | instituciones.centros.store   | App\Http\Controllers\Api\Instituciones\CentrosController@store         | api          |
+|        | GET|HEAD  | api/instituciones/{institucione}/centros               | instituciones.centros.index   | App\Http\Controllers\Api\Instituciones\CentrosController@index         | api          |
+|        | GET|HEAD  | api/instituciones/{institucione}/centros/create        | instituciones.centros.create  | App\Http\Controllers\Api\Instituciones\CentrosController@create        | api          |
+|        | PUT|PATCH | api/instituciones/{institucione}/centros/{centro}      | instituciones.centros.update  | App\Http\Controllers\Api\Instituciones\CentrosController@update        | api          |
+|        | DELETE    | api/instituciones/{institucione}/centros/{centro}      | instituciones.centros.destroy | App\Http\Controllers\Api\Instituciones\CentrosController@destroy       | api          |
+|        | GET|HEAD  | api/instituciones/{institucione}/centros/{centro}      | instituciones.centros.show    | App\Http\Controllers\Api\Instituciones\CentrosController@show          | api          |
+|        | GET|HEAD  | api/instituciones/{institucione}/centros/{centro}/edit | instituciones.centros.edit    | App\Http\Controllers\Api\Instituciones\CentrosController@edit          | api          |
+|        | GET|HEAD  | api/instituciones/{institucione}/edit                  | instituciones.edit            | App\Http\Controllers\Api\Instituciones\InstitucionesController@edit    | api          |
+|        | GET|HEAD  | api/user                                               |                               | Closure                                                                | api,auth:api |
+|        | GET|HEAD  | beneficiario                                           |                               | App\Http\Controllers\Web\Beneficiarios\BeneficiariosController@create  | web          |
+|        | GET|HEAD  | beneficiario/{id}                                      |                               | App\Http\Controllers\Web\Beneficiarios\BeneficiariosController@edit    | web          |
+|        | GET|HEAD  | beneficiarios                                          |                               | Closure                                                                | web          |
+|        | GET|HEAD  | centro                                                 |                               | App\Http\Controllers\Web\Centros\CentrosController@create              | web          |
+|        | GET|HEAD  | centros                                                |                               | Closure                                                                | web          |
+|        | GET|HEAD  | institucion                                            |                               | App\Http\Controllers\Web\Instituciones\InstitucionesController@create  | web          |
+|        | PUT       | institucion/{id?}                                      |                               | App\Http\Controllers\Web\Instituciones\InstitucionesController@update  | web          |
+|        | GET|HEAD  | instituciones                                          |                               | Closure                                                                | web          |
++--------+-----------+--------------------------------------------------------+-------------------------------+------------------------------------------------------------------------+--------------+

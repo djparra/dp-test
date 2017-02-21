@@ -1,0 +1,21 @@
+{
+  "draw": 1,
+  "recordsTotal": 2,
+  "recordsFiltered": 2,
+  "data": [
+    {
+      "nombre":"Juan Perez",
+      "dni":"14333777",
+      "institucion":"Tzedaka",
+      "f_alta":"12/12/2016",
+      "estado":"Activo"
+    },
+    {
+      "nombre":"Pablo Pablangas",
+      "dni":"18999777",
+      "institucion":"Tzedaka",
+      "f_alta":"01/01/2017",
+      "estado":"Activo"
+    }
+	]
+  }

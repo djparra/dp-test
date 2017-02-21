@@ -15,10 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/beneficiarios', function () { return view('beneficiarios.grid');});
+Route::get('/instituciones', function () { return view('instituciones.grid');});
+Route::get('/centros', function () { return view('centros.grid');});
 
-Route::get('/home', function () {
-    return view('home');
-});
+//Estas rutas muestran las pantallas de alta
+Route::get('/institucion', 'Web\Instituciones\InstitucionesController@create');
+Route::put('/institucion/{id?}', 'Web\Instituciones\InstitucionesController@update');
+//Route::get('/institucion/{id}', 'Web\Instituciones\InstitucionesController@show');
+Route::get('/centro', 'Web\Centros\CentrosController@create');
+Route::get('/beneficiario', 'Web\Beneficiarios\BeneficiariosController@create');
+Route::get('/beneficiario/{id}', 'Web\Beneficiarios\BeneficiariosController@edit');
+Route::get('/beneficiario/{id}/detalle/{detalle}', 'Web\Beneficiarios\BeneficiariosController@edit_detalle');

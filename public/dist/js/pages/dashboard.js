@@ -124,6 +124,7 @@ $(function () {
 
   /* Morris.js Charts */
   // Sales chart
+  
   var area = new Morris.Area({
     element: 'revenue-chart',
     resize: true,
@@ -176,6 +177,7 @@ $(function () {
   });
 
   //Donut Chart
+
   var donut = new Morris.Donut({
     element: 'sales-chart',
     resize: true,
