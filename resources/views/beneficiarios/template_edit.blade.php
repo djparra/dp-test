@@ -38,15 +38,15 @@
               <div class="profile-usermenu">
                   <ul class="nav">
                     <li id="detalle_1">
-                        <a href="http://localhost/beneficiario/{{$data}}/detalle/1">
+                        <a href="http://104.131.91.149/beneficiario/{{$data}}/detalle/1">
                             <i class="icon-home"></i> Resumen </a>
                     </li>
                     <li id="detalle_2">
-                        <a href="http://localhost/beneficiario/{{$data}}/detalle/2">
+                        <a href="http://104.131.91.149/beneficiario/{{$data}}/detalle/2">
                             <i class="icon-event"></i> Eventos </a>
                     </li>
                     <li id="detalle_3">
-                        <a href="http://localhost/beneficiario/{{$data}}/detalle/3">
+                        <a href="http://104.131.91.149/beneficiario/{{$data}}/detalle/3">
                             <i class="icon-info"></i> Historia </a>
                     </li>
                   </ul>
