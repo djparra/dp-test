@@ -19,9 +19,11 @@
             <div class="box-body box-profile">
               <img class="profile-user-img img-responsive img-circle" src="{{ asset('dist/img/user4-128x128.jpg') }}" alt="User profile picture">
 
-              <h3 class="profile-username text-center" id="nombre"></h3>
+              <h3 class="profile-username text-center" id="perfil_nombre"></h3>
 
-              <p class="text-muted text-center" id="datos_aux"></p>
+              <p class="text-muted text-center" id="perfil_estado"></p>
+              <p class="text-muted text-center" id="perfil_centro"></p>
+              <p class="text-muted text-center" id="perfil_edad"></p>
 <!--
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
@@ -63,7 +65,7 @@
        <div class="col-md-9">
          <!-- Custom Tabs -->
          <section>
-           @yield('profile')
+                  @yield('profile')
          </section>
 
        </div>
@@ -74,10 +76,10 @@
 
 
 @section('scripts')
-<script type="text/javascript">
+  <script type="text/javascript">
+    console.log("TEMPLATE");
 
-
-</script>
+  </script>
 
 
 @endsection

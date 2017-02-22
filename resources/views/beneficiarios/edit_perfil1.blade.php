@@ -154,7 +154,12 @@
   $(document).ready(function() {
     var $bene;
 
-    $('#nombre').text("Ulises Dengue");
+    $('#perfil_nombre').text("Ulises Dengue");
+    $('#perfil_estado').text("Activo").addClass("bg-green");
+    $('#perfil_centro').text("Centro TZDK1");
+    $('#perfil_edad').text("70 años");
+
+
     $('#detalle_1').addClass("active");
 //console.log({{$data}});
     // Al cargar la página, trae todas las instituciones para el Select
@@ -185,7 +190,7 @@
           $('#txt_provincia').val($bene[0]["dp_provincia"]);
 
 
-$('#datos_aux').text("70 años");
+
         },
         error: function (jqXHR, textStatus, errorThrown)
         {

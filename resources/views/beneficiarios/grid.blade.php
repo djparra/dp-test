@@ -87,7 +87,7 @@
         //console.log($data['id']);
       //window.location.replace("beneficiario/" + $data['id']);
         //window.location="{{ URL::to('beneficiario/'.'1') }}";
-window.location.href = "beneficiario/" + $data['id'];
+      window.location.href = "beneficiario/" + $data['id'];
     });
 
 
