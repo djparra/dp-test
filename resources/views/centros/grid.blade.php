@@ -1,7 +1,7 @@
 @extends('template.main')
 
 @section('link_css')
-<!--<link rel="stylesheet" href=" {{ asset('css/dataTables.responsive.min.css')}} ">-->
+<link rel="stylesheet" href=" {{ asset('css/dataTables.responsive.min.css')}} ">
 <link rel="stylesheet" href=" {{ asset('css/jquery.dataTables.css')}} ">
 
 @endsection
@@ -25,7 +25,7 @@
           <!-- /.box-header -->
 
           <div class="box-body">
-            <table id="tabla_centros" class="display cell-border" cellspacing="0" width="100%">
+            <table id="tabla_centros" class="display responsive nowrap cell-border" cellspacing="0" width="100%">
               <thead>
                 <tr>
                 <th class="dt-head-center">Nombre</th>
@@ -50,6 +50,7 @@
 
 @section('scripts')
 <script src=" {{ asset('plugins/datatables/jquery.dataTables.min.js') }} "></script>
+<script src=" {{ asset('plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js') }} "></script>
 
 <script type="text/javascript">
 
