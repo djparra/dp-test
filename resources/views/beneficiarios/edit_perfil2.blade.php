@@ -1,64 +1,52 @@
-
 @extends('beneficiarios.template_edit')
+
+
 
 @section('profile')
 
-
-
+<link rel="stylesheet" href=" {{ asset('css/dataTables.responsive.min.css')}} ">
+<link rel="stylesheet" href=" {{ asset('css/jquery.dataTables.css')}} ">
 
         <div class="box box-primary">
           <div class="box-header">
-            <h3 class="box-title">Eventos</h3>
-
-            <div class="box-tools">
-              <div class="input-group input-group-sm" style="width: 150px;">
-                <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
-
-                <div class="input-group-btn">
-                  <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                </div>
-              </div>
-            </div>
+            <h3 class="box-title">Grupo Familiar</h3>
           </div>
           <!-- /.box-header -->
-          <div class="box-body table-responsive no-padding">
-            <table class="table table-hover">
-              <tr>
-                <th>Nro</th>
-                <th>Prestación</th>
-                <th>Acuerdo</th>
-                <th>Estado</th>
-                <th>Observaciones</th>
-              </tr>
-              <tr>
-                <td>183</td>
-                <td>Monetaria A</td>
-                <td>11-7-2014</td>
-                <td><span class="label label-success">Aprobado</span></td>
-                <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-              </tr>
-              <tr>
-                <td>219</td>
-                <td>Monetaria B</td>
-                <td>11-7-2014</td>
-                <td><span class="label label-warning">Pendiente</span></td>
-                <td>Blablablablabl blablabla bla.</td>
-              </tr>
-              <tr>
-                <td>657</td>
-                <td>Monetaria C</td>
-                <td>11-7-2014</td>
-                <td><span class="label label-primary">Aprobado</span></td>
-                <td>Blablablablabl blablabla blaBlablablablabl blablabla bla.</td>
-              </tr>
-              <tr>
-                <td>175</td>
-                <td>Monetaria A</td>
-                <td>11-7-2014</td>
-                <td><span class="label label-danger">Rechazado</span></td>
-                <td>Blablablablabl blablabla bla.</td>
-              </tr>
-            </table>
+          <div class="box-body">
+            <table id="example" class="display responsive nowrap cell-border" cellspacing="0" width="100%">
+              <thead>
+                <tr>
+                  <th>Beneficiario</th>
+                  <th>Edad</th>
+                  <th>Parentezco</th>
+                  <th>Estado</th>
+                  <th>Observaciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Rubén Andrada</td>
+                  <td>35 años</td>
+                  <td>Hijo</td>
+                  <td><span class="label label-success">Aprobado</span></td>
+                  <td>Observaciones conviviente Rubén</td>
+                </tr>
+                <tr>
+                  <td>Romina Andrada</td>
+                  <td>38 años</td>
+                  <td>Hijo</td>
+                  <td><span class="label label-success">Aprobado</span></td>
+                  <td>Observaciones conviviente Romina</td>
+                </tr>
+                <tr>
+                  <td>Ricardo Andrada</td>
+                  <td>40 años</td>
+                  <td>Hijo</td>
+                  <td><span class="label label-warning">En proceso</span></td>
+                  <td>Observaciones conviviente Ricardo</td>
+                </tr>
+              </tbody>
+          </table>
           </div>
           <!-- /.box-body -->
         </div>
@@ -70,14 +58,29 @@
 
 @section('scripts')
 <!--<script src=" {{ asset('plugins/datatables/jquery.dataTables.min.js') }} "></script>-->
+<script src=" {{ asset('plugins/datatables/jquery.dataTables.min.js') }} "></script>
+<script src=" {{ asset('plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js') }} "></script>
 
 <script type="text/javascript">
 
   $(document).ready(function() {
 
+    $('#perfil_nombre').text("Belisario Andrada");
+    $('#perfil_estado').text("Activo").addClass("bg-green");
+    $('#perfil_centro').html("<b>Centro:</b> Jabad");
+    $('#perfil_tipo_bene').html("<b>Tipo beneficiario: </b> Titular");
+    $('#perfil_edad').html("<b>Edad:</b> 70 años");
+    $('#perfil_programas').html("<b>Progamas:</b> Programa Salud, Fondo Sur");
+
     $('#detalle_2').addClass("active");
 
-    console.log({{$data}});
+    $('#example').DataTable( {
+        "paging":   false,
+        "ordering": false,
+        "info":     false,
+        "searching": false
+    });
+
   });
 </script>
 

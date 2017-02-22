@@ -50,6 +50,13 @@ class BeneficiariosController extends Controller
         return view('beneficiarios.edit_perfil2')->with('data', $id_beneficiario);
     else if($detalle==3)
         return view('beneficiarios.edit_perfil3')->with('data', $id_beneficiario);
+    else if($detalle==4)
+        return view('beneficiarios.edit_perfil4')->with('data', $id_beneficiario);
+    else if($detalle==5)
+        return view('beneficiarios.edit_perfil5')->with('data', $id_beneficiario);
+    else if($detalle==6)
+        return view('beneficiarios.edit_perfil6')->with('data', $id_beneficiario);
+
   }
 
 }

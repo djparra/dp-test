@@ -25,8 +25,8 @@
 
                       <div class="row form-group">
                         <label for="txt_nombre" class="col-sm-2 control-label">Nombre</label>
-                        <div class="col-sm-3"><input type="text" id="txt_nombre" class="form-control" placeholder=""></div>
-                        <label for="txt_apellido" class="col-sm-1 control-label">Apellido</label>
+                        <div class="col-sm-2"><input type="text" id="txt_nombre" class="form-control" placeholder=""></div>
+                        <label for="txt_apellido" class="col-sm-2 control-label">Apellido</label>
                         <div class="col-sm-2"><input type="text" id="txt_apellido" class="form-control" placeholder=""></div>
                         <label for="txt_apellido_casada" class="col-sm-2 control-label">Apellido Casada</label>
                         <div class="col-sm-2"><input type="text" id="txt_apellido_casada" class="form-control" placeholder=""></div>
@@ -47,9 +47,7 @@
                         <label for="txt_nro_documento" class="col-sm-2 control-label">Nro. Documento</label>
                         <div class="col-sm-2"><input type="text" id="txt_nro_documento" class="form-control" placeholder=""></div>
                         <label class="col-sm-2 control-label">F. Nacimiento</label>
-                        <div class="input-group date" >
-                          <input type="text" class="form-control col-sm-2" id="f_nacimiento">
-                        </div>
+                        <div class="col-sm-2"><input type="text" id="f_nacimiento" class="form-control" placeholder=""></div>
                       </div>
 
                       <div class="row form-group">
@@ -154,10 +152,12 @@
   $(document).ready(function() {
     var $bene;
 
-    $('#perfil_nombre').text("Ulises Dengue");
+    $('#perfil_nombre').text("Belisario Andrada");
     $('#perfil_estado').text("Activo").addClass("bg-green");
-    $('#perfil_centro').text("Centro TZDK1");
-    $('#perfil_edad').text("70 años");
+    $('#perfil_centro').html("<b>Centro:</b> Jabad");
+    $('#perfil_tipo_bene').html("<b>Tipo beneficiario: </b> Titular");
+    $('#perfil_edad').html("<b>Edad:</b> 70 años");
+    $('#perfil_programas').html("<b>Progamas:</b> Programa Salud, Fondo Sur");
 
 
     $('#detalle_1').addClass("active");

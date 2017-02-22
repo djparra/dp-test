@@ -58,33 +58,34 @@ desired effect
 -->
 <body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
+
     @include('template.nav')
+
+    @include('template.left')
+
+    <div class="content-wrapper">
+        @yield('contenido')
+    </div>
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+      @include('template.bottom')
+    </footer>
   </div>
-
-  @include('template.left')
-
-  <div class="content-wrapper">
-    <section>
-      @yield('contenido')
-    </section>
-  </div>
-
-  <!-- Main Footer -->
-  <footer class="main-footer">
-    @include('template.bottom')
-  </footer>
-
   <!-- Control Sidebar -->
 
 <!-- REQUIRED JS SCRIPTS -->
 
 <!-- jQuery 2.2.3 -->
 <script src="{{ asset('plugins/jQuery/jquery-2.2.3.min.js') }} "></script>
+<script src="{{ asset('dist/js/jquery-ui.min.js') }} "></script>
+
 <!-- Bootstrap 3.3.6 -->
 <script src="{{ asset('bootstrap/js/bootstrap.min.js') }} "></script>
 <!-- AdminLTE App -->
-<script src="{{ asset('dist/js/app.min.js') }} "></script>
+<script src="{{ asset('dist/js/app.js') }} "></script>
 
+<script src="{{ asset('dist/js/demo.js') }} "></script>
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. Slimscroll is required when using the

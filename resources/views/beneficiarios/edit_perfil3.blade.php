@@ -1,103 +1,86 @@
-
 @extends('beneficiarios.template_edit')
+
 
 @section('profile')
 
 
-<!-- row -->
-<div class="row">
-  <div class="col-md-12">
-    <!-- The time line -->
-    <ul class="timeline">
-      <!-- timeline time label -->
-      <li class="time-label">
-            <span class="bg-red">
-              10 Feb. 2014
-            </span>
-      </li>
-      <!-- /.timeline-label -->
-      <!-- timeline item -->
-      <li>
-        <i class="fa fa-envelope bg-blue"></i>
+<link rel="stylesheet" href=" {{ asset('css/dataTables.responsive.min.css')}} ">
+<link rel="stylesheet" href=" {{ asset('css/jquery.dataTables.css')}} ">
 
-        <div class="timeline-item">
-          <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
 
-          <h3 class="timeline-header"><a href="#">Support Team</a> sent you an email</h3>
-
-          <div class="timeline-body">
-            Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
-            weebly ning heekya handango imeem plugg dopplr jibjab, movity
-            jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
-            quora plaxo ideeli hulu weebly balihoo...
+        <div class="box box-primary">
+          <div class="box-header">
+            <h3 class="box-title">Entrevistas</h3>
           </div>
-          <div class="timeline-footer">
-            <a class="btn btn-primary btn-xs">Read more</a>
-            <a class="btn btn-danger btn-xs">Delete</a>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <table id="example" class="display responsive nowrap cell-border" cellspacing="0" width="100%">
+              <thead>
+                <tr>
+                <th>Fecha</th>
+                <th>Tipo</th>
+                <th>Evaluador</th>
+                <th>Centro</th>
+                <th>Observaciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>12/10/2015</td>
+                  <td>Evaluación</td>
+                  <td>Jorge Martínez</td>
+                  <td>Jabad</td>
+                  <td>Observaciones de la primera entrevista</td>
+                </tr>
+                <tr>
+                  <td>05/02/2016</td>
+                  <td>Observación</td>
+                  <td>Jorge Martínez</td>
+                  <td>Jabad</td>
+                  <td>Observaciones de la segunda entrevista</td>
+                </tr>
+                <tr>
+                  <td>18/12/2016</td>
+                  <td>Intervención</td>
+                  <td>Juan Rodríguez</td>
+                  <td>Jabad</td>
+                  <td>Observaciones de la tercera entrevista</td>
+                </tr>
+              </tbody>
+          </table>
           </div>
+          <!-- /.box-body -->
         </div>
-      </li>
-      <!-- END timeline item -->
-      <!-- timeline item -->
-      <li>
-        <i class="fa fa-user bg-aqua"></i>
+        <!-- /.box -->
 
-        <div class="timeline-item">
-          <span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span>
-
-          <h3 class="timeline-header no-border"><a href="#">Sarah Young</a> accepted your friend request</h3>
-        </div>
-      </li>
-      <!-- END timeline item -->
-      <!-- timeline item -->
-      <li>
-        <i class="fa fa-comments bg-yellow"></i>
-
-        <div class="timeline-item">
-          <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
-
-          <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
-
-          <div class="timeline-body">
-            Take me to your leader!
-            Switzerland is small and neutral!
-            We are more like Germany, ambitious and misunderstood!
-          </div>
-          <div class="timeline-footer">
-            <a class="btn btn-warning btn-flat btn-xs">View comment</a>
-          </div>
-        </div>
-      </li>
-      <!-- END timeline item -->
-      <!-- timeline time label -->
-      <li class="time-label">
-            <span class="bg-green">
-              3 Jan. 2014
-            </span>
-      </li>
-      <!-- /.timeline-label -->
-
-      <li>
-        <i class="fa fa-clock-o bg-gray"></i>
-      </li>
-    </ul>
-  </div>
-  <!-- /.col -->
-</div>
 
 
 @endsection
 
 @section('scripts')
-<!--<script src=" {{ asset('plugins/datatables/jquery.dataTables.min.js') }} "></script>-->
+
+<script src=" {{ asset('plugins/datatables/jquery.dataTables.min.js') }} "></script>
+<script src=" {{ asset('plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js') }} "></script>
 
 <script type="text/javascript">
 
   $(document).ready(function() {
+    $('#perfil_nombre').text("Belisario Andrada");
+    $('#perfil_estado').text("Activo").addClass("bg-green");
+    $('#perfil_centro').html("<b>Centro:</b> Jabad");
+    $('#perfil_tipo_bene').html("<b>Tipo beneficiario: </b> Titular");
+    $('#perfil_edad').html("<b>Edad:</b> 70 años");
+    $('#perfil_programas').html("<b>Progamas:</b> Programa Salud, Fondo Sur");
 
     $('#detalle_3').addClass("active");
 
-    console.log({{$data}});
+    $('#example').DataTable( {
+        "paging":   false,
+        "ordering": false,
+        "info":     false,
+        "searching": false
+    });
+
   });
 </script>
 
