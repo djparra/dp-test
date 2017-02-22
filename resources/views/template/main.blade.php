@@ -34,7 +34,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <![endif]-->
 
   @yield('link_css')
-  
+
 </head>
 <!--
 BODY TAG OPTIONS:
@@ -75,9 +75,7 @@ desired effect
   </footer>
 
   <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-      @include('template.control')
-  </aside>
+
 <!-- REQUIRED JS SCRIPTS -->
 
 <!-- jQuery 2.2.3 -->
