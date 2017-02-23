@@ -11,7 +11,7 @@
           <div class="box-header">
             <h3 class="box-title">Grupo Familiar</h3>
             <div class="box-tools pull-right">
-              <button type="button" class="btn btn-block btn-primary btn-sm">Agregar conviviente</button>
+              <button type="button" class="btn btn-block btn-primary">Agregar conviviente</button>
             </div>
           </div>
           <!-- /.box-header -->

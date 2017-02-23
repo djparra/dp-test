@@ -1,0 +1,55 @@
+{
+  "data": [
+  {
+    "id": "1",
+    "tipo_prestacion": "Monetaria",
+    "prestacion": "Apoyo Escolar",
+    "fecha": "02/01/2017",
+    "estado": "Pendiente",
+    "cantidad_entregas": "1",
+    "entrega":"No se registran entregas",
+    "fecha_entrega":""
+  },
+  {
+    "id": "2",
+    "tipo_prestacion": "Monetaria",
+    "prestacion": "Expensas",
+    "fecha": "12/10/2016",
+    "estado": "En progreso",
+    "cantidad_entregas": "2",
+    "entrega":"$200",
+    "fecha_entrega":"20/10/2016"
+
+  },
+  {
+    "id": "3",
+    "tipo_prestacion": "Monetaria",
+    "prestacion": "Viáticos",
+    "fecha": "22/01/2016",
+    "estado": "Finalizado",
+    "cantidad_entregas": "2",
+    "entrega":"entrega monetaria para apoyo escolar",
+    "fecha_entrega":""
+  },
+  {
+    "id": "4",
+    "tipo_prestacion": "Servicio c/entrega",
+    "prestacion": "Psicólogo",
+    "fecha": "15/12/2015",
+    "estado": "Finalizado",
+    "cantidad_entregas": "1",
+    "entrega":"Servicio psi",
+    "fecha_entrega":""
+  },
+  {
+    "id": "5",
+    "tipo_prestacion": "Servicio c/entrega",
+    "prestacion": "Coro",
+    "fecha": "15/12/2015",
+    "estado": "Anulado",
+    "cantidad_entregas": "1",
+    "entrega":"Servicio",
+    "fecha_entrega":""
+  }
+  ]
+}

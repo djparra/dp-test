@@ -12,7 +12,7 @@
           <div class="box-header">
             <h3 class="box-title">Entrevistas</h3>
             <div class="box-tools pull-right">
-              <button type="button" class="btn btn-block btn-primary btn-sm">Nueva entrevista</button>
+              <button type="button" class="btn btn-block btn-primary">Nueva entrevista</button>
             </div>
           </div>
           <!-- /.box-header -->

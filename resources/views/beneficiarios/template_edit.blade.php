@@ -18,7 +18,7 @@
           <!-- Profile Image -->
           <div class="box box-primary">
             <div class="box-body box-profile">
-              <img class="profile-user-img img-responsive img-circle" src="{{ asset('dist/img/user4-128x128.jpg') }}" alt="User profile picture">
+              <img class="profile-user-img img-responsive img-circle" src="{{ asset('dist/img/belisario.jpg') }}" alt="User profile picture">
 
               <h3 class="profile-username text-center" id="perfil_nombre"></h3>
 

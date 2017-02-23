@@ -2,3 +2,12 @@ td.highlight {
     background-color: whitesmoke !important;
     border:solid 1px black;
 }
+
+
+td.details-control {
+    background: url('../dist/img/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.details td.details-control {
+    background: url('../dist/img/details_close.png') no-repeat center center;
+}
