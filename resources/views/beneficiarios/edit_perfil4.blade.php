@@ -10,53 +10,61 @@
           <div class="box-header">
             <h3 class="box-title">Acuerdos</h3>
 
-            <div class="box-tools">
-              <div class="input-group input-group-sm" style="width: 150px;">
-                <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
-
-                <div class="input-group-btn">
-                  <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                </div>
-              </div>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-block btn-primary btn-sm">Nuevo acuerdo</button>
             </div>
+
           </div>
           <!-- /.box-header -->
           <div class="box-body table-responsive no-padding">
             <table class="table table-hover">
               <tr>
                 <th>Nro</th>
+                <th>Tipo Prestación</th>
                 <th>Prestación</th>
-                <th>Acuerdo</th>
+                <th>Fecha</th>
                 <th>Estado</th>
-                <th>Observaciones</th>
+                <th>Cantidad Entregas</th>
               </tr>
               <tr>
                 <td>183</td>
-                <td>Monetaria A</td>
-                <td>11-7-2014</td>
-                <td><span class="label label-success">Aprobado</span></td>
-                <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                <td>Monetaria</td>
+                <td>Apoyo escolar</td>
+                <td>02/01/2017</td>
+                <td><span class="label label-warning">Pendiente</span></td>
+                <td>2</td>
               </tr>
               <tr>
                 <td>219</td>
-                <td>Monetaria B</td>
-                <td>11-7-2014</td>
-                <td><span class="label label-warning">Pendiente</span></td>
-                <td>Blablablablabl blablabla bla.</td>
-              </tr>
-              <tr>
-                <td>657</td>
-                <td>Monetaria C</td>
-                <td>11-7-2014</td>
-                <td><span class="label label-primary">Aprobado</span></td>
-                <td>Blablablablabl blablabla blaBlablablablabl blablabla bla.</td>
+                <td>Monetaria</td>
+                <td>Viáticos</td>
+                <td>12/10/2016</td>
+                <td><span class="label label-success">En progreso</span></td>
+                <td>2</td>
               </tr>
               <tr>
                 <td>175</td>
-                <td>Monetaria A</td>
-                <td>11-7-2014</td>
-                <td><span class="label label-danger">Rechazado</span></td>
-                <td>Blablablablabl blablabla bla.</td>
+                <td>Monetaria</td>
+                <td>Expensas</td>
+                <td>22/01/2016</td>
+                <td><span class="label label-info">Finalizado</span></td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>657</td>
+                <td>Servicio c/entrega</td>
+                <td>Psicólogo</td>
+                <td>15/12/2015</td>
+                <td><span class="label label-success">Aprobado</span></td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>175</td>
+                <td>Servicio c/entrega</td>
+                <td>Coro</td>
+                <td>15/12/2015</td>
+                <td><span class="label label-danger">Anulado</span></td>
+                <td>3</td>
               </tr>
             </table>
           </div>
@@ -77,6 +85,7 @@
 
     $('#perfil_nombre').text("Ulises Dengue");
     $('#perfil_estado').text("Activo").addClass("bg-green");
+    $('#perfil_institucion').html("<b>Institución:</b> TZEDAKÁ");
     $('#perfil_centro').html("<b>Centro:</b> Jabad");
     $('#perfil_tipo_bene').html("<b>Tipo beneficiario: </b> Titular");
     $('#perfil_edad').html("<b>Edad:</b> 70 años");

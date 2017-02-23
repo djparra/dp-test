@@ -129,6 +129,7 @@
 
     $('#perfil_nombre').text("Belisario Andrada");
     $('#perfil_estado').text("Activo").addClass("bg-green");
+    $('#perfil_institucion').html("<b>Institución:</b> TZEDAKÁ");
     $('#perfil_centro').html("<b>Centro:</b> Jabad");
     $('#perfil_tipo_bene').html("<b>Tipo beneficiario: </b> Titular");
     $('#perfil_edad').html("<b>Edad:</b> 70 años");

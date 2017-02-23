@@ -23,6 +23,7 @@
               <h3 class="profile-username text-center" id="perfil_nombre"></h3>
 
               <p class="text-muted text-center" id="perfil_estado"></p>
+              <h6 class="text-muted text-center" id="perfil_institucion"></h6>
               <h6 class="text-muted text-center" id="perfil_centro"></h6>
               <h6 class="text-muted text-center" id="perfil_tipo_bene"></h6>
               <h6 class="text-muted text-center" id="perfil_edad"></h6>
@@ -44,33 +45,27 @@
                   <ul class="nav">
                     <li id="detalle_1">
                       <a href="http://104.131.91.149/beneficiario/{{$data}}/detalle/1">
-                        <!--<a href="http://localhost/beneficiario/{{$data}}/detalle/1">-->
-                            <i class="icon-user"></i> Perfil </a>
+                    		<i class="icon-user"></i> Perfil </a>
                     </li>
                     <li id="detalle_2">
-                        <a href="http://104.131.91.149/beneficiario/{{$data}}/detalle/2">
-                        <!--<a href="http://localhost/beneficiario/{{$data}}/detalle/2">-->
-                            <i class="icon-home"></i> Grupo Familiar </a>
+                    	<a href="http://104.131.91.149/beneficiario/{{$data}}/detalle/2">
+                    		<i class="icon-home"></i> Grupo Familiar </a>
                     </li>
                     <li id="detalle_3">
-                        <a href="http://104.131.91.149/beneficiario/{{$data}}/detalle/3">
-                        <!--<a href="http://localhost/beneficiario/{{$data}}/detalle/3">-->
-                            <i class="icon-bubbles"></i> Entrevistas </a>
+                    	<a href="http://104.131.91.149/beneficiario/{{$data}}/detalle/3">
+                    		<i class="icon-bubbles"></i> Entrevistas </a>
                     </li>
                     <li id="detalle_4">
-                        <a href="http://104.131.91.149/beneficiario/{{$data}}/detalle/4">
-                        <!--<a href="http://localhost/beneficiario/{{$data}}/detalle/4">-->
-                            <i class="icon-note"></i> Acuerdos </a>
+                    	<a href="http://104.131.91.149/beneficiario/{{$data}}/detalle/4">
+                    		<i class="icon-note"></i> Acuerdos </a>
                     </li>
                     <li id="detalle_5">
-                        <a href="http://104.131.91.149/beneficiario/{{$data}}/detalle/5">
-                        <!--<a href="http://localhost/beneficiario/{{$data}}/detalle/5">-->
-                            <i class="icon-eye"></i> Medicamentos </a>
+                    	<a href="http://104.131.91.149/beneficiario/{{$data}}/detalle/5">
+                    		<i class="icon-eye"></i> Medicamentos </a>
                     </li>
                     <li id="detalle_6">
-                        <a href="http://104.131.91.149/beneficiario/{{$data}}/detalle/6">
-                        <!--<a href="http://localhost/beneficiario/{{$data}}/detalle/6">-->
-                            <i class="icon-info"></i> Historia </a>
+                    	<a href="http://104.131.91.149/beneficiario/{{$data}}/detalle/6">
+                    		<i class="icon-info"></i> Historia </a>
                     </li>
                   </ul>
               </div>

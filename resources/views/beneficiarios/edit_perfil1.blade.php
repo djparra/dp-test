@@ -3,7 +3,8 @@
 
 @section('profile')
 
-
+<link rel="stylesheet" href=" {{ asset('plugins/fullcalendar/fullcalendar.min.css')}} ">
+<link rel="stylesheet" href=" {{ asset('plugins/fullcalendar/fullcalendar.print.css')}} ">
        <div>
          <!-- Custom Tabs -->
          <section>
@@ -52,12 +53,14 @@
 
                       <div class="row form-group">
                         <label class="col-sm-2" style="margin-bottom:0; margin-top:5px; text-align:right;">Género</label>
-                        <div class="col-sm-2">
+                        <div class="col-sm-2"><input type="text" id="cb_sexo" class="form-control" placeholder=""></div>
+<!--                        <div class="col-sm-2">
                           <select class="form-control" id="cb_sexo">
                             <option value="Masculino">Masculino</option>
                             <option value="Femenino">Femenino</option>
                           </select>
                         </div>
+-->
                         <label class="col-sm-2" style="margin-bottom:0; margin-top:5px; text-align:right;">Nacionalidad</label>
                         <div class="col-sm-2">
                           <select class="form-control" id="cb_nacionalidad">
@@ -108,7 +111,7 @@
                     <!-- /.box-body -->
                     <div class="box-footer">
                       <label id="cancelar" class="btn btn-default">Cancelar</label>
-                      <label id="guardar" class="btn btn-info pull-right">Guardar</label>
+                      <label id="guardar" class="btn btn-primary pull-right">Guardar</label>
                     </div>
                   </form>
                </div>
@@ -141,11 +144,28 @@
 
        </div>
 
+       <div class="row">
+         <!-- left column -->
+         <div class="col-md-12">
+           <div class="box box-primary">
+              <div class="box-header with-border">
+                <h3 class="box-title">Domicilio</h3>
+              </div>
+              <div class="box-body">
+                <div class="map-container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6567.668422666707!2d-58.400790076900506!3d-34.60835356197679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sar!4v1487814447599"
+  width=100% height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+                </div>
+            </div>
+         </div>
+
+       </div>
 
 @endsection
 
 @section('scripts')
-<!--<script src=" {{ asset('plugins/datatables/jquery.dataTables.min.js') }} "></script>-->
+
 
 <script type="text/javascript">
 
@@ -154,6 +174,7 @@
 
     $('#perfil_nombre').text("Belisario Andrada");
     $('#perfil_estado').text("Activo").addClass("bg-green");
+    $('#perfil_institucion').html("<b>Institución:</b> TZEDAKÁ");
     $('#perfil_centro').html("<b>Centro:</b> Jabad");
     $('#perfil_tipo_bene').html("<b>Tipo beneficiario: </b> Titular");
     $('#perfil_edad').html("<b>Edad:</b> 70 años");
@@ -161,8 +182,27 @@
 
 
     $('#detalle_1').addClass("active");
+
+    $('#txt_nombre').val("Belisario");
+    $('#txt_apellido').val("Andrada");
+    $('#txt_apellido_casada').val("");
+    $('#cb_tipo_documento').val("DNI");
+    $('#txt_nro_documento').val("10111000");
+    $('#cb_sexo').val("Masculino");
+    $('#f_nacimiento').val("12/08/1950");
+    $('#cb_nacionalidad').val("Argentina");
+    $('#cb_estado_civil').val("Casado");
+    $('#txt_calle').val("Paraguay");
+    $('#txt_numero').val("3700");
+    $('#txt_piso').val("1 A");
+    $('#txt_localidad').val("CABA");
+    $('#txt_cp').val("1022");
+    $('#txt_provincia').val("CABA");
+
+
 //console.log({{$data}});
     // Al cargar la página, trae todas las instituciones para el Select
+    /*
     $.ajax({
         url : "{{ url('api/beneficiarios/3') }}",
         type: 'get',
@@ -197,7 +237,42 @@
             console.log("ERROR");
         }
     });
+*/
 
+
+      /* initialize the calendar
+       -----------------------------------------------------------------*/
+      //Date for the calendar events (dummy data)
+      var date = new Date();
+      var d = date.getDate(),
+          m = date.getMonth(),
+          y = date.getFullYear();
+      $('#calendar').fullCalendar({
+        header: {
+          left: '',
+          center: '',
+          right: ''
+        },
+        buttonText: {
+          today: 'Hoy',
+          month: 'Mes',
+          week: 'Semana',
+          day: 'Dia'
+        },
+        //Random default events
+        events: [
+          {
+            title: 'Entrevista',
+            start: new Date(y, m, d, 10, 30),
+            allDay: false,
+            backgroundColor: "#0073b7", //Blue
+            borderColor: "#0073b7" //Blue
+          }
+        ],
+        editable: false,
+        droppable: false
+
+      });
 
 
   });

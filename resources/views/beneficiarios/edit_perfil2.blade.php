@@ -10,6 +10,9 @@
         <div class="box box-primary">
           <div class="box-header">
             <h3 class="box-title">Grupo Familiar</h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-block btn-primary btn-sm">Agregar conviviente</button>
+            </div>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
@@ -18,32 +21,39 @@
                 <tr>
                   <th>Beneficiario</th>
                   <th>Edad</th>
-                  <th>Parentezco</th>
+                  <th>Parentesco</th>
                   <th>Estado</th>
                   <th>Observaciones</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
+                  <td>Belisario Andrada</td>
+                  <td>70 años</td>
+                  <td>Titular</td>
+                  <td><span class="label label-success">ACTIVO</span></td>
+                  <td>Observaciones Belisario</td>
+                </tr>
+                <tr>
+                  <td>María Andrada</td>
+                  <td>60 años</td>
+                  <td>Cónyuge</td>
+                  <td><span class="label label-success">ACTIVO</span></td>
+                  <td>Observaciones María</td>
+                </tr>
+                <tr>
                   <td>Rubén Andrada</td>
                   <td>35 años</td>
                   <td>Hijo</td>
-                  <td><span class="label label-success">Aprobado</span></td>
-                  <td>Observaciones conviviente Rubén</td>
+                  <td><span class="label label-success">ACTIVO</span></td>
+                  <td>Observaciones Rubén</td>
                 </tr>
                 <tr>
                   <td>Romina Andrada</td>
-                  <td>38 años</td>
+                  <td>35 años</td>
                   <td>Hijo</td>
-                  <td><span class="label label-success">Aprobado</span></td>
-                  <td>Observaciones conviviente Romina</td>
-                </tr>
-                <tr>
-                  <td>Ricardo Andrada</td>
-                  <td>40 años</td>
-                  <td>Hijo</td>
-                  <td><span class="label label-warning">En proceso</span></td>
-                  <td>Observaciones conviviente Ricardo</td>
+                  <td><span class="label label-success">ACTIVO</span></td>
+                  <td>Observaciones Romina</td>
                 </tr>
               </tbody>
           </table>
@@ -67,6 +77,7 @@
 
     $('#perfil_nombre').text("Belisario Andrada");
     $('#perfil_estado').text("Activo").addClass("bg-green");
+    $('#perfil_institucion').html("<b>Institución:</b> TZEDAKÁ");
     $('#perfil_centro').html("<b>Centro:</b> Jabad");
     $('#perfil_tipo_bene').html("<b>Tipo beneficiario: </b> Titular");
     $('#perfil_edad').html("<b>Edad:</b> 70 años");

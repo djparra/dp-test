@@ -91,6 +91,10 @@ desired effect
      user experience. Slimscroll is required when using the
      fixed layout. -->
 
+ <script src=" {{ asset('plugins/daterangepicker/moment.js') }} "></script>
+ <script src=" {{ asset('plugins/fullcalendar/fullcalendar.min.js') }} "></script>
+
+
       @yield('scripts')
 
 </body>

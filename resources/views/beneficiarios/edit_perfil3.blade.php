@@ -11,6 +11,9 @@
         <div class="box box-primary">
           <div class="box-header">
             <h3 class="box-title">Entrevistas</h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-block btn-primary btn-sm">Nueva entrevista</button>
+            </div>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
@@ -67,6 +70,7 @@
   $(document).ready(function() {
     $('#perfil_nombre').text("Belisario Andrada");
     $('#perfil_estado').text("Activo").addClass("bg-green");
+    $('#perfil_institucion').html("<b>Institución:</b> TZEDAKÁ");
     $('#perfil_centro').html("<b>Centro:</b> Jabad");
     $('#perfil_tipo_bene').html("<b>Tipo beneficiario: </b> Titular");
     $('#perfil_edad').html("<b>Edad:</b> 70 años");
