@@ -48,7 +48,7 @@
 
   $(document).ready(function() {
 
-    $('#perfil_nombre').text("Ulises Dengue");
+    $('#perfil_nombre').text("Belisario Andrada");
     $('#perfil_estado').text("Activo").addClass("bg-green");
     $('#perfil_institucion').html("<b>Institución:</b> TZEDAKÁ");
     $('#perfil_centro').html("<b>Centro:</b> Jabad");
