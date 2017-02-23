@@ -65,10 +65,12 @@
           '<div class="col-md-12"><b>Entregas</b></div></div>' +
           '<div class="row">'+
           '<div class="col-md-3">Fecha Entrega</div>'+
+          '<div class="col-md-3">Entrega</div>'+
           '<div class="col-md-3">Importe</div>'+
           '<div class="col-md-3">Estado</div></div>'+
           '<div class="row">'+
           '<div class="col-md-3">02/03/2017</div>'+
+          '<div class="col-md-3">1/1</div>'+
           '<div class="col-md-3">$200</div>'+
           '<div class="col-md-3">Pendiente</div></div>';
       }
@@ -139,6 +141,7 @@
         "info":     false,
         "searching": false,
         "ajax": "http://104.131.91.149/data.txt",
+        //"ajax": "http://localhost/data.txt",
         "columns": [
             {
                 "class":          "details-control",

@@ -31,28 +31,28 @@
                   <td>Belisario Andrada</td>
                   <td>70 años</td>
                   <td>Titular</td>
-                  <td><span class="label label-success">ACTIVO</span></td>
+                  <td class="bg-green">ACTIVO</td>
                   <td>Observaciones Belisario</td>
                 </tr>
                 <tr>
                   <td>María Andrada</td>
                   <td>60 años</td>
                   <td>Cónyuge</td>
-                  <td><span class="label label-success">ACTIVO</span></td>
+                  <td class="bg-green">ACTIVO</td>
                   <td>Observaciones María</td>
                 </tr>
                 <tr>
                   <td>Rubén Andrada</td>
                   <td>35 años</td>
                   <td>Hijo</td>
-                  <td><span class="label label-success">ACTIVO</span></td>
+                  <td class="bg-green">ACTIVO</td>
                   <td>Observaciones Rubén</td>
                 </tr>
                 <tr>
                   <td>Romina Andrada</td>
                   <td>35 años</td>
                   <td>Hijo</td>
-                  <td><span class="label label-success">ACTIVO</span></td>
+                  <td class="bg-green">ACTIVO</td>
                   <td>Observaciones Romina</td>
                 </tr>
               </tbody>
@@ -89,7 +89,10 @@
         "paging":   false,
         "ordering": false,
         "info":     false,
-        "searching": false
+        "searching": false,
+        "rowCallback": function( row, data, index ) {
+            $('td:eq(3)', row).css("text-align", "center");
+          }
     });
 
   });

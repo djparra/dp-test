@@ -5,6 +5,7 @@
 
 <link rel="stylesheet" href=" {{ asset('plugins/fullcalendar/fullcalendar.min.css')}} ">
 <link rel="stylesheet" href=" {{ asset('plugins/fullcalendar/fullcalendar.print.css')}} ">
+
        <div>
          <!-- Custom Tabs -->
          <section>
@@ -15,8 +16,20 @@
                <li><a href="#tab_2" data-toggle="tab">Salud</a></li>
                <li><a href="#tab_3" data-toggle="tab">Educación</a></li>
                <li><a href="#tab_3" data-toggle="tab">Laboral</a></li>
-               <li class="pull-right"><a href="#" class="text-muted"><i class="fa fa-gear"></i></a></li>
+               <li class="pull-right"><a href="#" class="text-muted dropdown-toggle" data-toggle="dropdown"><i class="fa fa-gear"></i></a>
+                 <ul class="dropdown-menu">
+                     <li><a href="#"><i class="fa fa-pencil-square-o"></i> Realizar entrevista</a></li>
+                     <li><a href="#"><i class="fa fa-check"></i> Modificar estado</a></li>
+                     <li><a href="#"><i class="fa fa-user-plus"></i> Agregar conviviente</a></li>
+                     <li><a href="#"><i class="fa fa-star-o"></i> Asignar programa</a></li>
+                     <li><a href="#"><i class="fa fa-address-card-o"></i> Realizar acuerdo</a></li>
+                     <li><a href="#"><i class="fa fa-briefcase"></i> Registrar entrega</a></li>
+                     <li><a href="#"><i class="fa fa-ambulance"></i> Pedir medicamentos</a></li>
+                     <li><a href="#"><i class="fa fa-exchange"></i> Transfererir de centro</a></li>
+                 </ul>
+              </li>
              </ul>
+
              <div class="tab-content">
 
                <div class="tab-pane active" id="tab_1">

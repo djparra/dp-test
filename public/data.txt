@@ -43,7 +43,7 @@
   },
   {
     "id": "5",
-    "tipo_prestacion": "Servicio c/entrega",
+    "tipo_prestacion": "Servicio s/entrega",
     "prestacion": "Coro",
     "fecha": "15/12/2015",
     "estado": "Anulado",

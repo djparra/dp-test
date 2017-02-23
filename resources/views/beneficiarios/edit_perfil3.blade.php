@@ -7,7 +7,6 @@
 <link rel="stylesheet" href=" {{ asset('css/dataTables.responsive.min.css')}} ">
 <link rel="stylesheet" href=" {{ asset('css/jquery.dataTables.css')}} ">
 
-
         <div class="box box-primary">
           <div class="box-header">
             <h3 class="box-title">Entrevistas</h3>
@@ -25,29 +24,33 @@
                 <th>Evaluador</th>
                 <th>Centro</th>
                 <th>Observaciones</th>
+                <th></th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>12/10/2015</td>
-                  <td>Evaluación</td>
+                  <td class="bg-green">Evaluación</td>
                   <td>Jorge Martínez</td>
                   <td>Jabad</td>
                   <td>Observaciones de la primera entrevista</td>
+                  <td></td>
                 </tr>
                 <tr>
                   <td>05/02/2016</td>
-                  <td>Observación</td>
+                  <td class="bg-yellow">Observación</td>
                   <td>Jorge Martínez</td>
                   <td>Jabad</td>
                   <td>Observaciones de la segunda entrevista</td>
+                  <td></td>
                 </tr>
                 <tr>
                   <td>18/12/2016</td>
-                  <td>Intervención</td>
+                  <td class="bg-blue">Intervención</td>
                   <td>Juan Rodríguez</td>
                   <td>Jabad</td>
                   <td>Observaciones de la tercera entrevista</td>
+                  <td></td>
                 </tr>
               </tbody>
           </table>
@@ -65,6 +68,7 @@
 <script src=" {{ asset('plugins/datatables/jquery.dataTables.min.js') }} "></script>
 <script src=" {{ asset('plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js') }} "></script>
 
+
 <script type="text/javascript">
 
   $(document).ready(function() {
@@ -78,11 +82,21 @@
 
     $('#detalle_3').addClass("active");
 
-    $('#example').DataTable( {
+    var table =$('#example').DataTable( {
         "paging":   false,
         "ordering": false,
         "info":     false,
-        "searching": false
+        "searching": false,
+        "columnDefs": [ {
+            targets: 4,
+            render: function ( data, type, row ) {
+                return data.substr( 0, 30 ) +'…';
+            }
+          }
+         ],
+        "rowCallback": function( row, data, index ) {
+            $('td:eq(1)', row).css("text-align", "center");
+          }
     });
 
   });
