@@ -138,7 +138,7 @@
         "ordering": false,
         "info":     false,
         "searching": false,
-        "ajax": "http://localhost/data.txt",
+        "ajax": "http://104.131.91.149/data.txt",
         "columns": [
             {
                 "class":          "details-control",
