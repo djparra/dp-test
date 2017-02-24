@@ -1,3 +1,9 @@
-<div class="pull-right hidden-xs"> TZEDAKA </div>
-<!-- Default to the left -->
-<strong>Copyright &copy; 2017 <a href="#">PranaEstudio</a>.</strong>
+
+
+
+
+
+
+<div >
+  <img class="img-responsive" style="margin: 0 auto;"  src="{{ asset('dist/img/logo-tzedaka-03.png')}}" alt="TZEDAKA">
+</div>
