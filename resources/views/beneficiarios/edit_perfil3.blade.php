@@ -28,7 +28,7 @@
                 <th>Evaluador</th>
                 <th>Centro</th>
                 <th>Observaciones</th>
-                <th></th>
+                <th>Archivos</th>
                 </tr>
               </thead>
               <tbody>
@@ -38,7 +38,7 @@
                   <td>Jorge Martínez</td>
                   <td>Jabad</td>
                   <td>Observaciones de la primera entrevista</td>
-                  <td></td>
+                  <td><i class="fa fa-paperclip"></i></td>
                 </tr>
                 <tr>
                   <td>05/02/2016</td>
@@ -46,7 +46,7 @@
                   <td>Jorge Martínez</td>
                   <td>Jabad</td>
                   <td>Observaciones de la segunda entrevista</td>
-                  <td></td>
+                  <td><i class="fa fa-paperclip"></i></td>
                 </tr>
                 <tr>
                   <td>18/12/2016</td>
@@ -54,7 +54,7 @@
                   <td>Juan Rodríguez</td>
                   <td>Jabad</td>
                   <td>Observaciones de la tercera entrevista</td>
-                  <td></td>
+                  <td><i class="fa fa-paperclip"></i></td>
                 </tr>
               </tbody>
           </table>
@@ -99,7 +99,8 @@
           }
          ],
         "rowCallback": function( row, data, index ) {
-            $('td:eq(1)', row).css("text-align", "center");
+          $('td:eq(1)', row).css("text-align", "center");
+          $('td:eq(5)', row).css("text-align", "center");
           }
     });
 
