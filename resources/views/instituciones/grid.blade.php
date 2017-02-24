@@ -3,7 +3,7 @@
 @section('link_css')
 <link rel="stylesheet" href=" {{ asset('css/dataTables.responsive.min.css')}} ">
 <link rel="stylesheet" href=" {{ asset('css/jquery.dataTables.css')}} ">
-
+<link rel="stylesheet" href=" {{ asset('css/dataTables.bootstrap.css')}} ">
 @endsection
 
 
@@ -70,7 +70,7 @@
       "ajax": {"url":"/api/instituciones","dataSrc": ""},
       "searching":   false,
       "paging":   false,
-      "ordering": false,
+      "ordering": true,
       "info":     false,
       "columns": [
             { "data": "id", "visible":false, "sercheable":false },

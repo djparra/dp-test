@@ -143,8 +143,7 @@
           ' <table class="display responsive cell-border" cellspacing="0" width="100%">'+
             ' <thead> <tr> <th>Medicamento</th> <th>Monodroga</th> <th>Cantidad</th> </tr> </thead>'+
             ' <tbody>'+
-          	' <tr>  <td>Ibutenk 400</td> <td>Ibuprofeno</td> <td>1</td> </tr>'+
-          	' <tr> <td>Paracetamol</td> <td>Paracetamol</td> <td>1</td> </tr>'+
+          	' <tr>  <td>Aspirina</td> <td>A. acetilsalicílico</td> <td>4</td> </tr>'+
             ' </tbody>'+
           ' </table></div></div></div>';
       }

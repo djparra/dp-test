@@ -10,12 +10,12 @@
 
         <div class="box box-primary">
           <div class="box-header">
-            <h3 class="box-title">Grupo Familiar</h3>
+            <h3 class="box-title">Grupo Conviviente</h3>
             <span class="pull-right"><a href="#" class="text-muted dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-gear"></i></a>
               <ul class="dropdown-menu">
                 <li><a href="#"><i class="fa fa-user-plus"></i> Agregar conviviente</a></li>
-                <li><a href="#"><i class="fa fa-home"></i> Modificar grupo familiar</a></li>
+                <li><a href="#"><i class="fa fa-home"></i> Modificar grupo conviviente</a></li>
               </ul>
             </span>
           </div>

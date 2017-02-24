@@ -66,74 +66,56 @@
     function format ( d ) {
 
       if(d.id=="1"){
-        return '<div class="row">'+
-          '<div class="col-md-12"><b>Entregas</b></div></div>' +
-          '<div class="row">'+
-          '<div class="col-md-3">Fecha Entrega</div>'+
-          '<div class="col-md-3">Entrega</div>'+
-          '<div class="col-md-3">Importe</div>'+
-          '<div class="col-md-3">Estado</div></div>'+
-          '<div class="row">'+
-          '<div class="col-md-3">02/03/2017</div>'+
-          '<div class="col-md-3">1/1</div>'+
-          '<div class="col-md-3">$200</div>'+
-          '<div class="col-md-3">Pendiente</div></div>';
+
+          return '<div class="row"><div class="col-md-offset-1 col-md-10"><div class="box-body">'+
+            ' <table id="tbl_detalle" class="display responsive cell-border" cellspacing="0" width="100%">'+
+              ' <thead> <tr> <th>Fecha entrega</th><th>Entrega</th><th>Cantidad</th><th>Importe</th><th>Consumida</th> </tr> </thead>'+
+              ' <tbody>'+
+            	' <tr>  <td>02/03/2017</td><td>1/1</td><td>1</td><td>$200</td><td>NO</td> </tr>'+
+              ' </tbody>'+
+            ' </table></div></div></div>';
+
       }
       else if(d.id=="2"){
-        return '<div class="row">'+
-          '<div class="col-md-12"><b>Entregas</b></div></div>' +
-          '<div class="row">'+
-          '<div class="col-md-3">Fecha Entrega</div>'+
-          '<div class="col-md-3">Importe</div>'+
-          '<div class="col-md-3">Estado</div></div>'+
-          '<div class="row">'+
-          '<div class="col-md-3">12/11/2016</div>'+
-          '<div class="col-md-3">$750</div>'+
-          '<div class="col-md-3">Realizada</div></div>'+
-          '<div class="row">'+
-          '<div class="col-md-3">12/04/2017</div>'+
-          '<div class="col-md-3">$750</div>'+
-          '<div class="col-md-3">Pendiente de entrega</div></div>';
+          return '<div class="row"><div class="col-md-offset-1 col-md-10"><div class="box-body">'+
+            ' <table id="tbl_detalle" class="display responsive cell-border" cellspacing="0" width="100%">'+
+              ' <thead> <tr> <th>Fecha entrega</th><th>Entrega</th><th>Cantidad</th><th>Importe</th><th>Consumida</th> </tr> </thead>'+
+              ' <tbody>'+
+              ' <tr>  <td>12/11/2016</td><td>1/2</td><td>1</td><td>$750</td><td>SI</td> </tr>'+
+              ' <tr>  <td>12/04/2017</td><td>2/2</td><td>1</td><td>$750</td><td>NO</td> </tr>'+
+              ' </tbody>'+
+            ' </table></div></div></div>';
       }
       else if(d.id=="3"){
-        return '<div class="row">'+
-          '<div class="col-md-12"><b>Entregas</b></div></div>' +
-          '<div class="row">'+
-          '<div class="col-md-3">Fecha Entrega</div>'+
-          '<div class="col-md-3">Importe</div>'+
-          '<div class="col-md-3">Estado</div></div>'+
-          '<div class="row">'+
-          '<div class="col-md-3">22/02/2016</div>'+
-          '<div class="col-md-3">$750</div>'+
-          '<div class="col-md-3">Realizada</div></div>'+
-          '<div class="row">'+
-          '<div class="col-md-3">22/03/2017</div>'+
-          '<div class="col-md-3">$750</div>'+
-          '<div class="col-md-3">Realizada</div></div>';
+
+          return '<div class="row"><div class="col-md-offset-1 col-md-10"><div class="box-body">'+
+            ' <table id="tbl_detalle" class="display responsive cell-border" cellspacing="0" width="100%">'+
+              ' <thead> <tr> <th>Fecha entrega</th><th>Entrega</th><th>Cantidad</th><th>Importe</th><th>Consumida</th> </tr> </thead>'+
+              ' <tbody>'+
+              ' <tr>  <td>22/02/2016</td><td>1/2</td><td>1</td><td>$350</td><td>SI</td> </tr>'+
+              ' <tr>  <td>22/03/2017</td><td>2/2</td><td>1</td><td>$350</td><td>SI</td> </tr>'+
+              ' </tbody>'+
+            ' </table></div></div></div>';
       }
       else if(d.id=="4"){
-        return '<div class="row">'+
-          '<div class="col-md-12"><b>Entregas</b></div></div>' +
-          '<div class="row">'+
-          '<div class="col-md-3">Fecha Entrega</div>'+
-          '<div class="col-md-3">Importe</div>'+
-          '<div class="col-md-3">Estado</div></div>'+
-          '<div class="row">'+
-          '<div class="col-md-3">20/12/2015</div>'+
-          '<div class="col-md-3">---</div>'+
-          '<div class="col-md-3">Realizada</div>';
+
+          return '<div class="row"><div class="col-md-offset-1 col-md-10"><div class="box-body">'+
+            ' <table id="tbl_detalle" class="display responsive cell-border" cellspacing="0" width="100%">'+
+              ' <thead> <tr> <th>Fecha entrega</th><th>Entrega</th><th>Cantidad</th><th>Importe</th><th>Consumida</th> </tr> </thead>'+
+              ' <tbody>'+
+            	' <tr>  <td>20/12/2015</td><td>1/1</td><td>1</td><td>---</td><td>SI</td> </tr>'+
+              ' </tbody>'+
+            ' </table></div></div></div>';
       }
       else if(d.id=="5"){
-        return '<div class="row">'+
-          '<div class="col-md-12"><b>Entregas</b></div></div>' +
-          '<div class="row">'+
-          '<div class="col-md-3">Fecha Entrega</div>'+
-          '<div class="col-md-3">Importe</div>'+
-          '<div class="col-md-3">Estado</div></div>'+
-          '<div class="row">'+
-          '<div class="col-md-3">15/12/2015</div>'+
-          '<div class="col-md-3">---</div>'+
-          '<div class="col-md-3">Anulada</div>';
+
+          return '<div class="row"><div class="col-md-offset-1 col-md-10"><div class="box-body">'+
+            ' <table id="tbl_detalle" class="display responsive cell-border" cellspacing="0" width="100%">'+
+              ' <thead> <tr> <th>Fecha entrega</th><th>Entrega</th><th>Cantidad</th><th>Importe</th><th>Consumida</th> </tr> </thead>'+
+              ' <tbody>'+
+            	' <tr>  <td>15/12/2015</td><td>1/1</td><td>1</td><td>---</td><td>NO</td> </tr>'+
+              ' </tbody>'+
+            ' </table></div></div></div>';
       }
 
       return "";
@@ -215,7 +197,6 @@
             $('#'+id+' td.details-control').trigger( 'click' );
         } );
     } );
-
 
   });
 </script>

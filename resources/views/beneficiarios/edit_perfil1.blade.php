@@ -3,12 +3,11 @@
 
 @section('profile')
 
-<link rel="stylesheet" href=" {{ asset('plugins/fullcalendar/fullcalendar.min.css')}} ">
-<link rel="stylesheet" href=" {{ asset('plugins/fullcalendar/fullcalendar.print.css')}} ">
 
-       <div  class="row">
-         <!-- Custom Tabs -->
-         <section>
+<link rel="stylesheet" href=" {{ asset('css/dataTables.responsive.min.css')}} ">
+<link rel="stylesheet" href=" {{ asset('css/jquery.dataTables.css')}} ">
+<link rel="stylesheet" href=" {{ asset('css/dataTables.bootstrap.css')}} ">
+
            <div class="box box-primary" style="min-height:540px;">
               <div class="box-header with-border">
                 <h3 class="box-title">Perfil</h3>
@@ -157,9 +156,7 @@
            <!-- nav-tabs-custom -->
          </div>
        </div>
-      </section>
 
-       </div>
 
        <div class="row">
          <!-- left column -->
@@ -190,6 +187,22 @@
               </div>
               <div class="box-body">
 
+                  <table id="tbl_contactos" class="display responsive nowrap cell-border" cellspacing="0" width="100%">
+                    <thead>
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Relación</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Joaquín Gutierrez</td><td>011-43422244</td><td>Vecino</td></tr>
+                      <tr><td>Josefina Andrada</td><td>011-6636633</td><td>Hermana</td></tr>
+                      <tr><td>Darío Martineitz</td><td>011-77663677</td><td>Amigo</td></tr>
+                      <tr><td>Enrique Porta</td><td>011-9990000</td><td>Primo</td></tr>
+                    </tbody>
+                  </table>
+
               </div>
           </div>
         </div>
@@ -199,6 +212,9 @@
 @endsection
 
 @section('scripts')
+<script src=" {{ asset('plugins/datatables/jquery.dataTables.min.js') }} "></script>
+<script src=" {{ asset('plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js') }} "></script>
+
 
 
 <script type="text/javascript">
@@ -272,41 +288,14 @@
         }
     });
 */
-
-
-      /* initialize the calendar
-       -----------------------------------------------------------------*/
-      //Date for the calendar events (dummy data)
-      var date = new Date();
-      var d = date.getDate(),
-          m = date.getMonth(),
-          y = date.getFullYear();
-      $('#calendar').fullCalendar({
-        header: {
-          left: '',
-          center: '',
-          right: ''
-        },
-        buttonText: {
-          today: 'Hoy',
-          month: 'Mes',
-          week: 'Semana',
-          day: 'Dia'
-        },
-        //Random default events
-        events: [
-          {
-            title: 'Entrevista',
-            start: new Date(y, m, d, 10, 30),
-            allDay: false,
-            backgroundColor: "#0073b7", //Blue
-            borderColor: "#0073b7" //Blue
-          }
-        ],
-        editable: false,
-        droppable: false
-
+       $('#tbl_contactos').DataTable( {
+          "paging":   false,
+          "ordering": true,
+          "info":     false,
+          "searching": false,
+          "order": [ 1, 'desc' ]
       });
+
 
 
   });
