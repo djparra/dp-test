@@ -49,7 +49,7 @@
                     </li>
                     <li id="detalle_2">
                     	<a href="http://104.131.91.149/beneficiario/{{$data}}/detalle/2">
-                    		<i class="icon-home"></i> Grupo Familiar </a>
+                    		<i class="icon-home"></i> Grupo Conviviente </a>
                     </li>
                     <li id="detalle_3">
                     	<a href="http://104.131.91.149/beneficiario/{{$data}}/detalle/3">
