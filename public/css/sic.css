@@ -11,3 +11,22 @@ td.details-control {
 tr.details td.details-control {
     background: url('../dist/img/details_close.png') no-repeat center center;
 }
+
+.box .box-header .box-title{
+  font-size: 26px;
+  font-family:'Open Sans';
+  font-weight: 'Light';
+}
+/*
+table tr td{
+  font-size: 15px;
+  font-family:'Open Sans';
+  font-weight: 'Semibold';
+}
+
+table tr th{
+  font-size: 18px;
+  font-family:'Open Sans';
+  font-weight: 'Semibold';
+}
+*/

@@ -5,14 +5,19 @@
 
 <link rel="stylesheet" href=" {{ asset('css/dataTables.responsive.min.css')}} ">
 <link rel="stylesheet" href=" {{ asset('css/jquery.dataTables.css')}} ">
+<link rel="stylesheet" href=" {{ asset('css/dataTables.bootstrap.css')}} ">
 
         <div class="box box-primary">
           <div class="box-header">
             <h3 class="box-title">Acuerdos</h3>
-
-            <div class="box-tools pull-right">
-              <button type="button" class="btn btn-block btn-primary">Nuevo acuerdo</button>
-            </div>
+            <span class="pull-right"><a href="#" class="text-muted dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-gear"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><i class="fa fa-edit"></i>Realizar Acuerdo</a></li>
+                <li><a href="#"><i class="fa fa-hand-stop-o"></i>Cancelar Acuerdo</a></li>
+                <li><a href="#"><i class="fa fa-briefcase"></i>Realizar Entrega</a></li>
+              </ul>
+            </span>
 
           </div>
           <!-- /.box-header -->
@@ -137,7 +142,7 @@
 
     var dt = $('#tbl_acuerdos').DataTable( {
         "paging":   false,
-        "ordering": false,
+        "ordering": true,
         "info":     false,
         "searching": false,
         "ajax": "http://104.131.91.149/data.txt",

@@ -6,13 +6,18 @@
 
 <link rel="stylesheet" href=" {{ asset('css/dataTables.responsive.min.css')}} ">
 <link rel="stylesheet" href=" {{ asset('css/jquery.dataTables.css')}} ">
+<link rel="stylesheet" href=" {{ asset('css/dataTables.bootstrap.css')}} ">
 
         <div class="box box-primary">
           <div class="box-header">
             <h3 class="box-title">Grupo Familiar</h3>
-            <div class="box-tools pull-right">
-              <button type="button" class="btn btn-block btn-primary">Agregar conviviente</button>
-            </div>
+            <span class="pull-right"><a href="#" class="text-muted dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-gear"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><i class="fa fa-user-plus"></i> Agregar conviviente</a></li>
+                <li><a href="#"><i class="fa fa-home"></i> Modificar grupo familiar</a></li>
+              </ul>
+            </span>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
@@ -87,7 +92,7 @@
 
     $('#example').DataTable( {
         "paging":   false,
-        "ordering": false,
+        "ordering": true,
         "info":     false,
         "searching": false,
         "rowCallback": function( row, data, index ) {

@@ -3,7 +3,7 @@
 @section('link_css')
 <link rel="stylesheet" href=" {{ asset('css/dataTables.responsive.min.css')}} ">
 <link rel="stylesheet" href=" {{ asset('css/jquery.dataTables.css')}} ">
-
+<link rel="stylesheet" href=" {{ asset('css/dataTables.bootstrap.css')}} ">
 @endsection
 
 
@@ -65,7 +65,7 @@
       "ajax": {"url":"/api/beneficiarios","dataSrc": ""}, //"datos.txt",
       "searching":   false,
       "paging":   false,
-      "ordering": false,
+      "ordering": true,
       "info":     false,
       "columns": [
             { "data": "dp_nombre" },

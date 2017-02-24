@@ -11,7 +11,7 @@
     <ul class="timeline">
       <!-- timeline time label -->
       <li class="time-label">
-            <span class="bg-red">
+            <span class="bg-gray">
               23 Feb. 2017
             </span>
       </li>
@@ -26,10 +26,8 @@
           <h3 class="timeline-header">Acuerdo de medicamentos</h3>
 
           <div class="timeline-body">
-            Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
-            weebly ning heekya handango imeem plugg dopplr jibjab, movity
-            jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
-            quora plaxo ideeli hulu weebly balihoo...
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
           </div>
           <div class="timeline-footer">
             <a class="btn btn-primary btn-xs">Leer mas</a>
@@ -66,7 +64,7 @@
         </div>
       </li>
       <li class="time-label">
-            <span class="bg-green">
+            <span class="bg-gray">
               05 Feb. 2016
             </span>
       </li>
@@ -102,7 +100,7 @@
       <!-- END timeline item -->
       <!-- timeline time label -->
       <li class="time-label">
-            <span class="bg-green">
+            <span class="bg-gray">
               12 Oct. 2015
             </span>
       </li>
